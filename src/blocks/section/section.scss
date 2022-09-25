@@ -12,6 +12,12 @@
     background: $black;
     color: #fff;
   }
+  &--pb {
+    padding-bottom: 150px;
+    @include media-tablet {
+      padding-bottom: 0;
+    }
+  }
   &--banner {
     padding-top: 45px;
     background: linear-gradient(180deg, rgb(255 255 255 / 1) 0%, rgb(255 255 255 / 1) 82%, rgb(28 28 28 / 1) 82%, rgb(28 28 28 / 1) 0100%);

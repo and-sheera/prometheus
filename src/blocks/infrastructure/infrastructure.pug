@@ -69,7 +69,7 @@ mixin infrastructure(mods)
             .infrastructure__info
               each block in item.txt
                 .infrastructure__text !{block}
-              if item.mod == 'kindergarten'
+              if item.mod === 'kindergarten'
                 .infrastructure__text
                   span.infrastructure__text-bolder В садике есть все, что нужно для малышей:
                   .infrastructure__benefits
