@@ -1,0 +1,17 @@
+mixin banner(mods)
+  -
+    const baseName = 'banner'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .banner(class=allMods)&attributes(attributes)
+    +ui-h2('Квартиры <span class="text-nowrap">премиум-класса</span> в&nbsp;центре города', 'banner')
+    .banner__img
+      img(src='img/banner.webp' alt='')
+    block

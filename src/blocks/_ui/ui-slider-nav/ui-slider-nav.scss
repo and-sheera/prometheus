@@ -1,0 +1,77 @@
+.ui-slider-nav {
+  display: flex;
+  align-items: center;
+  &__btn {
+    position: relative;
+    width: 67px;
+    height: 67px;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+    @include media-laptop {
+      width: 45px;
+      height: 45px;
+    }
+    @include media-tablet {
+      width: 33px;
+      height: 33px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 42px;
+      height: 9px;
+      background-image: url("data:image/svg+xml,%3Csvg width='42' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M41.769 4.854a.5.5 0 0 0 0-.708L38.587.964a.5.5 0 1 0-.707.708L40.708 4.5 37.88 7.328a.5.5 0 1 0 .707.708l3.182-3.182ZM.672 5h40.743V4H.672v1Z' fill='%231C1C1C'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: 0.3s ease;
+      @include media-laptop {
+        width: 22px;
+        height: 9px;
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.71 4.899a.5.5 0 0 0 0-.707L17.53 1.01a.5.5 0 0 0-.707.707l2.828 2.828-2.828 2.829a.5.5 0 1 0 .707.707l3.182-3.182ZM.236 5.045h20.122v-1H.235v1Z' fill='%231C1C1C'/%3E%3C/svg%3E");
+      }
+    }
+    &:hover {
+      @include no-mobile {
+        background: $green;
+        border-color: $green;
+      }
+      &::before {
+        @include no-mobile {
+          filter: invert(1);
+        }
+      }
+    }
+    &:active {
+      background: $green;
+      border-color: $green;
+      &::before {
+        filter: invert(1);
+      }
+    }
+    &.swiper-button-disabled {
+      background: transparent;
+      border-color: #fff;
+      &::before {
+        filter: invert(1);
+      }
+    }
+    &--prev {
+      margin-right: 20px;
+      @include media-laptop {
+        margin-right: 15px;
+      }
+      @include media-tablet {
+        margin-right: 10px;
+      }
+      &::before {
+        transform: translate(-50%, -50%) scaleX(-1);
+      }
+    }
+  }
+}

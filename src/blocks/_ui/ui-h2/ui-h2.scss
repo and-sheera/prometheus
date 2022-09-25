@@ -1,0 +1,27 @@
+.ui-h2 {
+  margin: 0;
+  font: 80px/1.05 $fontSerif;
+  text-transform: uppercase;
+  @include media-laptop {
+    font-size: 60px;
+  }
+  @include media-tablet {
+    font-size: 32px;
+  }
+  > .ui-h2__attention {
+    display: flex;
+    align-items: baseline;
+    color: $green;
+    text-indent: 0.7em;
+    @include media-tablet {
+      flex-direction: column;
+      text-indent: 0.8em;
+    }
+    .ui-h2__attention--child {
+      text-indent: 0;
+      @include media-tablet {
+        text-indent: 2.6em;
+      }
+    }
+  }
+}

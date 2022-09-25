@@ -1,0 +1,65 @@
+mixin reasons(mods)
+  -
+    const baseName = 'reasons'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+    const list1 = [
+      'Цельный архитектурный ансамбль',
+      'Создание комфортной среды для времяпрепровождения людей',
+      'Соразмерный человеку облик здания, который&nbsp;не угнетает однообразием',
+    ]
+    const list2 = [
+      'Автоматическая система пожаротушения внутреннего паркинга',
+      'Виденаблюдение на территории',
+      'Выход из подъезда в закрытый двор',
+      'Система СКУД для жильцов дома по территории двора',
+    ]
+    const list3 = [
+      'Современные установки приточно-вытяжной и противодымной вентиляции',
+      'Наличие индивидуального теплового пункта для подогрева систем горячего водоснабжения и отопления',
+      'Регулирование расхода теплоносителя по магистралям осуществляется автоматическими балансировочными клапанами.',
+    ]
+    const list4 = [
+      'Покрытие тротуара, как  площадки для подъезда автомобилей к проектируемому зданию выполнено из вибропрессованной плитки',
+      'Детские и спортивные площадки выполнено с резиновым покрытием;',
+      'Озеленение территории предусматривает устройство газонов',
+      'Установка малых архитектурных форм и переносных изделий дополняет архитектурную выразительность проектируемого здания и обеспечивает необходимый комфорт для жильцов',
+    ]
+
+  .reasons(class=allMods)&attributes(attributes)
+    .reasons__item
+      .reasons__head
+        .reasons__name Архитектура
+          .reasons__name-inner и ландшафт
+        .reasons__num 01
+      +ui-ul(list1, 'reasons')
+    .reasons__item
+      .reasons__head
+        .reasons__name Безопасность
+          .reasons__name-inner и комфорт
+        .reasons__num 02
+      +ui-ul(list2, 'reasons')
+    .reasons__item.reasons__item--3
+      .reasons__head
+        .reasons__name Современные
+          .reasons__name-inner Технологии
+        .reasons__num 03
+      +ui-ul(list3, 'reasons')
+    .reasons__title
+      .reasons__title-num 4
+      .reasons__title-txt Причины выбрать именно <br> PROMETHEUS
+    .reasons__item.reasons__item--4
+      .reasons__head
+        .reasons__name продуманное
+          .reasons__name-inner благоустройство
+        .reasons__num 04
+      +ui-ul(list4, 'reasons')
+    a.reasons__btn(href='#') Перейти в планировки жилого комплекса
+    block

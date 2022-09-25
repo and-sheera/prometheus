@@ -1,0 +1,92 @@
+mixin infrastructure(mods)
+  -
+    const baseName = 'infrastructure'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+    const data = [
+      {
+        mod: 'kindergarten',
+        icon: 'data:image/png;base64,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',
+        name: 'Детский сад',
+        img: 'img/infrastructure-1.webp',
+        txt: [
+          '<span class="infrastructure__text-bolder">Детский сад в шаговой доступности</span> - это отличная возможность быстро отвести ребенка в группу и поехать на работу, больше проводить времени с детьми по вечерам, ведь на дорогу вы потратите считанные минуты',
+        ],
+      },
+      {
+        mod: 'education',
+        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAYAAABznEEcAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUzSURBVHgBzZpriFRlGMefscJKpdVSW1l1NKILfbCoEJTaJHFrs40uUBhmH6ykG4GkIDVLFz+0VF8qqzW2GxWVWgYFRa0VbhejdsPKzXR1C6lWdy0UqS0f/w/v/zBnjzPOucyZmT/8eM858z7veZ73nPd6RqSMUtUTwU1gPdgJ/gH/gm7wNrhWallw8AbwmzoNgU3gGbAGfMprpj5whdSa4NRDdHAHuMWeSIE8J4NbGYQpJ7UiONNKp94EY0LknwA6afMymCHVFBy4mM58GNFuNHiV7eWgtSOplnDzHrAHTJUYgl0W9IK/wTSptHxPYaUkEOwvYDmrJaZGSXw1M90oCZTJZL5F0gtmSUwlCeJ88Duc+LFYBtTubWC8lNYQqJOYShKE3bS/2I/sQp8D7+P4JElRSYI4AWjwIhweB9pw2Ap2gtnAutSspKTjJaGs30cyGcwEF4JlPH8N3AHuExfQ98i7DukGsAccYBF7pVqCQ1+AL8GjOlI9wX7fBjQOhof1aD3Msrqk0uKN/bJGfFYJmylgHqcm9/tsh6sdxE9MsxHtZ9DuB6axg0jSsE3bwbOSTM+DbVKgkwirJEHsAhPBBEmm6SznV6m08PjnBxpqpNko8p8ZaFNzpBrCja8G2+nE/Ii287y2AK6RagoO1NGZJyPavUC7SVILgiOfqFt+hnII+aaDvzTiOiRVwZlLWKvvgEyJvDYt+Yj5Y89cUxEcytGxz4uNGRwbvAAekFoUHFtJBw+BDnAPuB7cBV7iK2SruFVSi1K3m2GrtBcZyLAWlgV3KRgtZVJGYsocQTIXnAOsj68Hfsf+AEvBIDgFtIMpvt//E7eiM7rBB1hgfSOVEJxvYG/kaR/bwdPsoWy3714eD4LHeGzYvtMW0A/a1W3dDPrK2mg9l6QhFHwdWAIma37zy5zL+nsjdTt+pjr+tpfnFsBMUM/ztYHyz9b8Blwf77MYNEu5hMJW8AbeNKO1SL7L+LtNy3M87mdq50t53FjEvk1HaoWkEMRnvhts5usx3pfPNsUGNL/v2sXa38Bze3X6AmXbuHGn5ncFTV+lGYQ5ZK/Jas2/Vv+r282bzbyP87pdG8VrY9VtKps6eM0GSNvGPMTrf6rbEp2m+dcunSAC1xeAdb4atAXSG3wC4wJ5x/KJvKduCWuybvhdcLmObFvlDUJdg/ZWcecVyXO6ugHtZ19Ar4AWdd8srK2s9/22jRVTV6S8c5nPer0lkkTqeiCvxkz2vi8sYTNX3eh8MGC7H6xVN74cy96eylDAdrkkCGKrusZ8nD0F1vRAsRoM2NoW/iN0oi2kzVSwS117u4jXvtNAZxA1CCus03d+JZ26MaR9E/M3hczfwvxX+a51lgoi6hrbWwefJumogWlvFKOoQbQw3SrpqJvpIomgUtuYA2AWHudicbvgd4MuTNQ2SQpCuTaAbsZhDumpSLeALNgncYWC5oDdmpf16RMj2EdqE7SZBN7y3XPIa+SxpW49vIYF1ke0jRwE7bzBrj1Mr1ayTeAR7xa3UVYN/YL77y+VKWrDfh01swgk/iRQSCh3DLhZ3GeBshee5aP1/jFgk7UOLbFbEfZ1UvcR8ynNj9SWPqFpfFFFoRl1u34f+xqejag2JW+QCEGoWzgtB1/7yrIVY7MW+EdCKsKNzgCrND/pO8Cn01QsCFZCo7q5lVfr9keWBzWtZWlYwYGF7BaHfY4tA7fz3NpRTt1czGRrCJvCL5Bak7q1sa3Sdmhh9bDWY3/urajU7UF1qPvbgzXaRklJRwBdkZT0fMgWfAAAAABJRU5ErkJggg==',
+        name: 'Общеобразовательные школы и досуг',
+        img: 'img/infrastructure-2.webp',
+        txt: [
+          'Расположение <span class="infrastructure__text-bolder">PROMETHEUS</span> позволяет юным жителям проводить время с пользой — в максимальной близости расположены три средние общеобразовательные школы ,а также дворец спорта «Юбилейный»и спортивный комплекс «Спартак».',
+          'Занятия ведутся по таким видам спорта, как хоккей, ушу, плавание и фигурное катание.',
+        ],
+      },
+      {
+        mod: 'location',
+        icon: `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewBox='0 0 40 48' fill='none'%3E%3Cpath d='M39 19.8182C39 34.4545 20 47 20 47C20 47 1 34.4545 1 19.8182C1 14.8273 3.00178 10.0408 6.56497 6.51172C10.1282 2.98262 14.9609 1 20 1C25.0391 1 29.8718 2.98262 33.435 6.51172C36.9982 10.0408 39 14.8273 39 19.8182Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20 26.0909C23.4978 26.0909 26.3333 23.2825 26.3333 19.8182C26.3333 16.3538 23.4978 13.5455 20 13.5455C16.5022 13.5455 13.6667 16.3538 13.6667 19.8182C13.6667 23.2825 16.5022 26.0909 20 26.0909Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E`,
+        name: 'Локация',
+        img: 'img/infrastructure-3.webp',
+        txt: [
+          'Жилой комплекс возводится на пересечении самых тихих улиц оживленного центра - Средне-Московской и Революции 1905 года. Такое нахождение обеспечивает рядом большой выбор торговых центров и гипермаркетов с полным ассортиментом всего необходимого — «Галерея Чижова», «Поиск», «Старик Хоттабыч». В 5 минутах ходьбы на главной магистрали правого берега — остановка общественного транспорта «Кольцовская», откуда можно с легкость добраться в любую точку города. ',
+        ],
+      },
+      {
+        mod: 'entertainment',
+        icon: 'data:image/png;base64,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',
+        name: 'Развлечения ',
+        img: 'img/infrastructure-4.webp',
+        txt: [
+          'Жить в самом центре города — это значит двигаться в динамичном ритме. В окружении возводимого комплекса расположена самая большая концентрация в Воронеже кафе и ресторанов всевозможной кухни, арт-галерей и выставочных пространств.',
+        ],
+      },
+    ]
+
+  .infrastructure(class=allMods)&attributes(attributes)
+    +ui-h2('Инфраструктура')
+      =' '
+      span.ui-h2__attention жилого&ensp;
+        span.ui-h2__attention.ui-h2__attention--child комплекса
+      +ui-slider-nav('infrastructure')
+    .infrastructure__slider
+      .swiper-wrapper
+        each item in data
+          .infrastructure__slide.swiper-slide(class=`infrastructure__slide--${item.mod}`)
+            .infrastructure__img
+              img(src=item.img alt='')
+              .infrastructure__aside
+                .infrastructure__icon
+                  img(src=item.icon alt='')
+                .infrastructure__name !{item.name}
+            .infrastructure__info
+              each block in item.txt
+                .infrastructure__text !{block}
+              if item.mod == 'kindergarten'
+                .infrastructure__text
+                  span.infrastructure__text-bolder В садике есть все, что нужно для малышей:
+                  .infrastructure__benefits
+                    .infrastructure__benefit
+                      .infrastructure__benefit-icon
+                        img(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOfSURBVHgB7ZhNSFRRFMfvmw+VmdK0GdFIHMNKgpKiyGihCzEpiKBFLYqkiJYZfWAQpiC1CItAoxbSx0ba9LUILMMPBDGihYuEJDVxGr9npKTBj5l+l0Z4jTPvvWkwhOYPZ969555z57xzz7n3nqcIDXg8HldycvLDYDC4g64fejM3N3clOzt7IprO2NhYmdVqvRoIBIroDkDNDoejThiAScsQJn1P04cxpxcWFipolyQlJXXQVyLpTE5OHrFYLC0Y0k33EM9biqKcgd8o4sHU1FQT9E7N83q96+B5p6enz0XR6WGsQc2bmJjYBT84Pj6eJXQQ1TO80SYeHWpeenq69JL0TH64PDwTtAcPPlXznU7nRx5foXKhA0u0AVwslyIglhs5v7i4aI2gYmZMMZvN8xHGgsIALCJGYOQ9Yskbiw4eu45Op55czMbg9jYRI8imJ0bkTGIVIWFMNKwqYzQDmEy9xIZ1VhgAm52IF5rGkJLPIEOZwN5jJn1bRRzQS+0BUrldGABGW+P1TiKAo0EvgK243yYMgBPdKuKEXsxUEwfV4h9Bz5h6bnYNwgA4ra3QZxEH9FLbxxVzSBjAf5VNARHhcqUlj3f8YiVAduTi9rRYdLjn5osEVgAKp3Itm1vf7Ozsy5ycnJ/qQWonJ3XQSVLWiUw31cGr8AlYzmJiZR9k57B8m5mZueyuS7lSwhylVA6PGe+PZowM4N1MdNNms31izTcvDWBkJQWbGyOOcwnfCTXC+yCLOzmOzloMuQO/nfZhqIg/7JB1E3IbpczIyMh62s0mk+k5coXMtUVoeUb+YMQajv8aFC5KD8DKZHIH7aqMjIz7IQ+45Jvxh7Js7YG2IfMdnQpO9o4lGfpt6NnpfmG8APKgcxCvDgkdKGHu3MpEe6XHmOCFLNrEcpcXI5MH/eCNWyPJ4I1yjMiChqgMOpE1tkW43e6CaLWzxODg4LrR0dHtWnMMDw9v8Pl8eVoyMzMz+bLq1JIxpaSk9LHOfuiG+NPIHHhtqampXpawl7cdpH9ZLcOyFMLvstvtboJ3QMpAZWoZjDxK4T/KEvfzPKZljMKf2vjscQBX3g7x7uL+VNb+Au1e2uf9fr+bYD5BX57gLbLeDtXilVATVIcxKciegn+N/iOoCyqFZALUkq0PXC6XR9MY1VvmMmEVzQLx+zNIF4FZH+YJFzI1NHOhaTzWlJaW9lotw/eZ/cSbNNLBHN941oeK/wT+Gr8AAqbyGqq2XVcAAAAASUVORK5CYII=' alt='')
+                      .infrastructure__benefit-txt Бассейн
+                    .infrastructure__benefit
+                      .infrastructure__benefit-icon
+                        img(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAQAAAAn3TzeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALNSURBVDjLfZTfi01RFMe/RISmS7z5caQUT36UB4WhyI8XJZHSHI2QGVHU+JW5MdEIM0lRfpyJKA/M+AfcBz9zMYmkJnfL4M6cvb5rTyg/ouPhnnPvnXtnnKe19+mz9nd/11obqPhMShoYaE6+s1d+ard2iq/T8b+P03iO/TwtHTRuPgD0jedKXtIcg7w3DKQNamyzGQsAzqNxzaV/bi+zzh8CklPsdmUZWcNbPFEGenxQnqiw2UwndeGSCtFXmS6tPk9mpC3lkM8n4vOYZGik6duUZL9nDLPcmKxsrXQxqzvjZd7jm0Se86RF3g2sKJOWc6lCHG6Si86jidcMeGCQYI+G+4t33sNrceTbNBAekdbCWabK0+nawx1F8IVdUMKi0fziUhDfXan21XnyOhEudXoxGpn3pFVvcoP4mrG7oJ26ZsjSr9IMp9otPCP3GUkPH/ExjVyQE2xnAL5iTSUSjbC1bGOk76Wd9Z9mSwe3A87TNwDgUpqD/qmQl3JpfpCM7Jb1mkms1y4AoC24KN/BfAn54el1fpaDieX8WIiiCZoDAF4J1wIAe6G/ip1/njnZGo0oa7j2/q1x9EjmALZWMgCgP1Eon13HnDRF4wYLDutsW5Ig3AQAfOiW9o1nN6QjXOva+LBvZrWb+blyN5ZbL4cBwC7j23CjdEEa5Ye0l0sb1C9PY1M2M4jPPcpIfLiUhGZs3pNFQ2LZOFqWYAD73QwAPMtj/bNoque3b6bEJRhYyNsxtI+Xk6fA5D3WS1clZmuLd1vMO/G0ZIvDrA36Evg6uWriG206ScAAyIzSB+IPehL0JgDoPddcajYGXFkcmlZAbth0paA0n+S9gYn2OLu1KVZhkkrKST0kz6VlqJ7fxtfcD/ROCucBQOgn7kVj5Bmd3TXMk+c8CWgYcDVrABrnmZRbztMS2rakT4dHfenkK/5lxN80EkhjNfIPuPvXAJ6vQdwAAAAASUVORK5CYII=' alt='')
+                      .infrastructure__benefit-txt Игровые комнаты
+                    .infrastructure__benefit
+                      .infrastructure__benefit-icon
+                        img(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASDSURBVHgBtZdZaFRnFMe/ezNJk2omJpO0mSTSTvVBSoktUuhDC5YuaWko3WxpH7QilRKwbeqDiktU1IgKils04kZUBEEFBRXRiajg8uKGKEES1JBkMkkmMzHJZBt/J86Vy3Dn3jHEA4dvO+f8z/Kdb+5o6jVQe3t7eVpa2u+xWMwDH41EIkd9Pl+/WUazM9Da2vpeRkbGGpRveDyeLSoF6ujo2MMggNsZI7qu/8z8t/T09I/dbnfQ0UBnZ2cpRm7j/ffMt8PrnXSCweCf6Oy3cOZf+BFc29LS8m5SAxKpgHZ1dU03Kdc6gQN8HkdnWJ21tbVN4XwOdu4zn54M9KqANjc3T2Z+F4UFcfDdomzjbCN67ygb4vxDAvAnBWUsgW8BtBTBBubzRYZ6aYFA4FuzHpfnLWSuEO3nKgXCZkA3g3IB6rgMFSMjIx1snQZkT35+/lpGMVgh4JqmxbixPwG0ztDt7+9/H51gQUGB3wkU57zYeKYngvb29naaQHfIOTf6KUO5Ac76L84LAK+Wcww1wNPC4bDHDrSxsXESGNXwPi0RNDMz8xRGDufl5W0MhUI+IpkPP8SJA5J+zvzw1tzc3G2kbCd6YWQXE8n/7M9jHUiC64JLsFWDrQ0ayg2k7hcDlMNDRLSJOk7EiIDsIrrvGC+zv9kCfB86fozVIfcGgXiTRVxYWPgYvZFRL5i4hoeHfYAeRLEWAzvjclOlCoDt7e7uvotMpZF2wKXmflKdhY5wWjzlUYYmlQLphP4N4z8o15tAVTQafUjEU+RBGBoa2o3cOeNMwOXCwUuMMqixEGmdR42WJ+5T41xS+QPgn1jpSd+qMZJud0g/x4g66nK5YmqcyZXsgPr9QSqr4TODg4M+opNWKONChdQ4kGXE8pBTu9VMP6Wef1PDMubnqPV/apzIEpi+/ojhGKBPjD1ep61EPCtBNIc7MJvslPPwl6pXoGSpziHFUfNGUVFRN+lOT5DTkJtKq73JWzCDc31gYGCO1+ttUqkC04MTenp63pY5j8lEDL1cCxFVBhFr5j1aLpSVlbWDPo8UFxf30h2/8uFwglL96AQ++gUi7QTQStO+vM0lprn8KpXi3J24kx+wvsdU2uwaXAjX81ZXZmdnz2S+gHvxhXIio49J1Qp4ruyxXgkvNEX8smeN/jX3scgjUyNz6n4WtgV22R2S2q8xmB1fuu1k+UkUYD/yM8nGejJYxfaFpLaVPYVIa5OwSoG4ZKtwdjFO1MsaRz5TYwGml2/IOxx/i8PKgQSQaIt58SahexxHvhwTMN4vkzrGaznZwrG5FmpH5KEh1XVkarY4YWlb2RCG1/CI+IRZPrEQmZa4AWANDo9+EAIs39ZVVradLtdXXJYJ8aXb4nwRwy7znrzl6BzkrBKHq8jWMfgAQTQZMnJnbIGhMDV7ql6RuBMbuVg3adPrgM8CuAwwrwl4s0t+EHibc/Ao50UQelj2GGX9gAtyUYT5aQyb/wUYc6t/Bnz+iHwFaT8B6Els7QfsUl9f3+jPK69bSL65HD9Jx5twou058VzsD+sRhykAAAAASUVORK5CYII=' alt='')
+                      .infrastructure__benefit-txt Разнообразные детские площадки
+                .infrastructure__text
+                  span.infrastructure__text-bolder Количество мест:
+                  |   400
+    +ui-slider-pagination('infrastructure')
+    block

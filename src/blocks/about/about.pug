@@ -1,0 +1,24 @@
+mixin about(mods)
+  -
+    const baseName = 'about'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .about(class=allMods)&attributes(attributes)
+    +ui-h2('о проекте', 'about')
+    .about__container
+      .about__img-left
+        img(src='img/about-1.webp' alt='')
+      .about__txt
+        span.about__txt-accent PROMETHEUS
+        | &nbsp;&mdash; это идеальное сочетание стиля и&nbsp;премиальности. Жилой комплекс премиум-класса состоит из&nbsp;4&nbsp;секций переменной этажности (5-12 этажей). Его строгий корпус с&nbsp;отделкой кирпичом, керамогранитом и&nbsp;штукатуркой прекрасно вписывается на&nbsp;Средне-Московскую улицу в&nbsp;историческую часть города.
+      .about__txt Истинным ценителям роскоши придутся по&nbsp;душе квартиры с&nbsp;террасами. Панорамное остекление не&nbsp;только позволит наполнить солнечным светом пространство каждой квартиры, но&nbsp;и&nbsp;подарит прекрасные виды. Городская площадь с&nbsp;ресторанами, супермаркетами, коммерческая инфраструктура на&nbsp;первых этажах привносят созвучную с&nbsp;ритмом города динамику.
+      .about__img-right
+        img(src='img/about-2.webp' alt='')
+    block

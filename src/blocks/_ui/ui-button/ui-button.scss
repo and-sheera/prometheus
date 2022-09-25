@@ -1,0 +1,57 @@
+.ui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 23px;
+  text-align: center;
+  font: 17px/1.4 $font;
+  white-space: nowrap;
+  color: $black;
+  background: transparent;
+  text-decoration: none;
+  border: 1px solid $black;
+  border-radius: 0;
+  transition: 0.3s ease;
+  cursor: pointer;
+  @include media-tablet {
+    font-size: 14px;
+    padding: 14px 27px;
+  }
+  &:hover {
+    @include no-mobile {
+      color: $green;
+      border-color: $green;
+    }
+  }
+  &:active {
+    background: $green;
+    color: #fff;
+    border-color: $green;
+  }
+  &--white {
+    color: #fff;
+    border-color: #fff;
+    box-shadow: 0 4px 20px 1px rgb(255 255 255 / 0.08);
+  }
+  &--filled {
+    padding: 15px 40px;
+    background: $green;
+    color: #fff;
+    border-color: $green;
+    font-size: 18px;
+    @include media-tablet {
+      padding: 12px 27px;
+      font-size: 16px;
+    }
+    &:hover {
+      @include no-mobile {
+        background: transparent;
+      }
+    }
+    &:active {
+      background: transparent;
+      color: $black;
+      border-color: $black;
+    }
+  }
+}

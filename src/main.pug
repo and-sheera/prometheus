@@ -1,0 +1,31 @@
+extends layouts/layout
+
+block variables
+  -
+    const pageTitle ='Main'
+
+block content
+  main
+    +section('--banner')
+      .inner
+        +banner
+    +section('--bg')
+      .inner
+        +about#about
+    +section('--bg, --ov-h')
+      .inner
+        +infrastructure#infrastructure
+    +section('--bg')
+      .inner
+        +reasons#reasons
+    +section('--bg, --ov-h')
+      .inner
+        +gallery
+    +section('--bg')
+      .inner
+        +benefits
+    +section('--bg')
+      .inner
+        +form
+
+

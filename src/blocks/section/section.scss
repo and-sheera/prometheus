@@ -1,0 +1,25 @@
+.section {
+  &:not(:first-child) {
+    padding-top: 200px;
+    @include media-laptop {
+      padding-top: 125px;
+    }
+    @include media-tablet {
+      padding-top: 50px;
+    }
+  }
+  &--bg {
+    background: $black;
+    color: #fff;
+  }
+  &--banner {
+    padding-top: 45px;
+    background: linear-gradient(180deg, rgb(255 255 255 / 1) 0%, rgb(255 255 255 / 1) 82%, rgb(28 28 28 / 1) 82%, rgb(28 28 28 / 1) 0100%);
+    @include media-tablet {
+      padding-top: 15px;
+    }
+  }
+  &--ov-h {
+    overflow: hidden;
+  }
+}

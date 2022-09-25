@@ -1,0 +1,39 @@
+.ui-input {
+  position: relative;
+  input {
+    width: 100%;
+    padding: 16px 0 5px;
+    font: 18px/1.1 $font;
+    border: solid $black;
+    border-width: 0 0 1px;
+    border-radius: 0;
+    color: $black;
+    outline: none;
+    @include media-tablet {
+      padding-top: 12px;
+      font-size: 12px;
+    }
+    &.filled ~ label,
+    &:focus ~ label {
+      top: 0;
+      transform: translateY(0);
+      font-size: 12px;
+      @include media-tablet {
+        font-size: 9px;
+      }
+    }
+  }
+  label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font: 18px/1.1 $font;
+    color: #686868;
+    transition: 0.3s ease;
+    pointer-events: none;
+    @include media-tablet {
+      font-size: 12px;
+    }
+  }
+}

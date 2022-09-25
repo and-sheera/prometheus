@@ -1,0 +1,139 @@
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto auto auto 1fr;
+  gap: 45px 50px;
+  grid-auto-flow: column;
+  @include media-laptop {
+    gap: 25px;
+  }
+  @include media-tablet {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    gap: 15px;
+  }
+  &__item {
+    padding: 18px 30px 32px;
+    border: 1px solid #949494;
+    @include media-laptop {
+      padding: 15px 10px;
+    }
+    &--3 {
+      grid-row: 3/5;
+      @include media-tablet {
+        grid-row: unset;
+      }
+    }
+    &--4 {
+      grid-row: 2/4;
+      @include media-tablet {
+        grid-row: unset;
+      }
+    }
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    margin-bottom: 20px;
+    font: 33px/1.1 $fontSerif;
+    text-transform: uppercase;
+    @include media-laptop {
+      font-size: 26px;
+    }
+    @include media-tablet {
+      font-size: 19px;
+    }
+  }
+  &__num {
+    font-size: 59px;
+    color: $green;
+    @include media-laptop {
+      font-size: 50px;
+    }
+    @include media-tablet {
+      font-size: 42px;
+    }
+  }
+  &__name {
+    &-inner {
+      text-indent: 2em;
+      @include media-laptop {
+        text-indent: 0.7em;
+      }
+      @include media-tablet {
+        text-indent: 1.1em;
+      }
+    }
+  }
+  &__ui-ul {
+    max-width: 480px;
+    font-size: 18px;
+    @include media-laptop {
+      font-size: 16px;
+    }
+    @include media-tablet {
+      max-width: 260px;
+      font-size: 11px;
+    }
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    padding: 0 25px 0 30px;
+    text-transform: uppercase;
+    @include media-laptop {
+      padding: 0;
+    }
+    @include media-tablet {
+      min-height: 150px;
+      margin-bottom: 10px;
+      order: -1;
+    }
+    &-num {
+      margin-right: 40px;
+      padding-top: 0.15em;
+      font: 215px/1 $fontSerif;
+      color: $green;
+      @include media-laptop {
+        font-size: 180px;
+      }
+      @include media-tablet {
+        margin-right: 10px;
+        font-size: 141px;
+      }
+    }
+    &-txt {
+      font: 39px/1.1 $fontSerif;
+      @include media-laptop {
+        font-size: 30px;
+      }
+      @include media-tablet {
+        font-size: 24px;
+      }
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    padding: 20px 95px;
+    background: $green;
+    color: #fff;
+    font: 33px/1.2 $fontSerif;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    @include media-laptop {
+      padding: 20px;
+      font-size: 26px;
+    }
+    @include media-tablet {
+      min-height: 165px;
+      padding: 25px;
+      font-size: 21px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+mixin ui-slider-nav(mods)
+  -
+    const baseName = 'ui-slider-nav'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .ui-slider-nav(class=allMods)&attributes(attributes)
+    .ui-slider-nav__btn.ui-slider-nav__btn--prev
+    .ui-slider-nav__btn.ui-slider-nav__btn--next
+    block

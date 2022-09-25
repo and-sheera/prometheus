@@ -1,0 +1,24 @@
+mixin form(mods)
+  -
+    const baseName = 'form'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  form.form(class=allMods)&attributes(attributes)
+    .form__container
+      .form__title Оставьте заявку, мы проведем подробную презентацию проекта
+      .form__inner
+        +ui-input('name', 'Имя', 'form')(name='name')
+        +ui-input('tel', 'Телефон', 'form')(name='tel')
+        +ui-checkbox('agreement', 'Соглашаюсь на обработку персональных данных', 'form')
+        .form__button
+          +ui-button('Оставить заявку', 'form, --filled')
+    .form__img
+      img(src='img/form.webp' alt='')
+    block

@@ -1,0 +1,20 @@
+//- menu из header.pug
+footer.footer
+  .inner
+    ul.footer__menu
+      each item in menu
+        li.footer__item
+          a.footer__link(href=item.link) !{item.text}
+    a.footer__logo(href='/')
+      +logo
+    +ui-button('Заказать звонок', 'footer, --white')
+    .footer__by
+      a.footer__by-logo(href='#' target='_blank')
+        img(src='img/footer_made_by.svg' alt='')
+      span Разработка сайтов
+    .footer__year 2022
+    .footer__copyright
+      .footer__copyright-item
+        a(href='#')  Политика конфиденциальности.
+      .footer__copyright-item
+        a(href='#')  Все права защищены.

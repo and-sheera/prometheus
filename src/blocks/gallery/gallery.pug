@@ -1,0 +1,27 @@
+mixin gallery(mods)
+  -
+    const baseName = 'gallery'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .gallery(class=allMods)&attributes(attributes)
+    +ui-h2('Фотогалерея', 'gallery')
+    .gallery__slider
+      +ui-slider-nav('gallery')
+      .swiper-wrapper
+        -for(let i=0; i<5; i++)
+          .gallery__slide.swiper-slide
+            .gallery__img.gallery__img--top
+              img(src='img/gallery-1.webp' alt='')
+            .gallery__img.gallery__img--bot
+              img(src='img/gallery-2.webp' alt='')
+            .gallery__img.gallery__img--right
+              img(src='img/gallery-3.webp' alt='')
+      .gallery__pagination
+    block

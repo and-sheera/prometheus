@@ -1,0 +1,34 @@
+.ui-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.1;
+  li {
+    position: relative;
+    padding-left: 30px;
+    @include media-tablet {
+      padding-left: 20px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 15px;
+      @include media-tablet {
+        margin-bottom: 10px;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 13px;
+      height: 13px;
+      background: $green;
+      border-radius: 50%;
+      @include media-tablet {
+        width: 7px;
+        height: 7px;
+      }
+    }
+  }
+}
