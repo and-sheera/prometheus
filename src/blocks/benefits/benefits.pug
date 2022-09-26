@@ -49,7 +49,6 @@ mixin benefits(mods)
       each item in data
         .benefits__item
           .benefits__name !{item.name}
-          .benefits__info
-            .benefits__text-wrapper
-              .benefits__text !{item.text}
+          .benefits__text
+            .benefits__text-inner !{item.text}
     block

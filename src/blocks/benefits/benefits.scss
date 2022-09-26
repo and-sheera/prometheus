@@ -60,7 +60,7 @@
       font-size: 19px;
     }
   }
-  &__info {
+  &__text {
     position: relative;
     padding: 30px 45px 30px 0;
     @include media-tablet {
@@ -89,13 +89,19 @@
         opacity: 1;
       }
     }
+    &--show {
+      .benefits__text-inner {
+        -webkit-line-clamp: unset;
+      }
+    }
   }
-  &__text {
+  &__text-inner {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     font: 18px/1.1 $font;
     overflow: hidden;
+    transition: height 0.5s ease;
     @include media-laptop {
       font-size: 16px;
     }
@@ -105,15 +111,6 @@
       -webkit-box-orient: unset;
       overflow: unset;
       font-size: 11px;
-    }
-    &-wrapper {
-      overflow: hidden;
-      transition: height 0.5s ease;
-      &--show {
-        .benefits__text {
-          -webkit-line-clamp: unset;
-        }
-      }
     }
   }
 }

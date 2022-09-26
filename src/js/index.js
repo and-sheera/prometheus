@@ -87,7 +87,6 @@ function gallery() {
       effect: 'creative',
       creativeEffect: {
         prev: {
-          shadow: true,
           translate: ['-20%', 0, -1]
         },
         next: {
@@ -103,32 +102,29 @@ function benefits() {
   if (benefitsBlock) {
     if (window.innerWidth > 767) {
       window.addEventListener('load', function () {
-        for (const textWrapper of document.querySelectorAll('.benefits__text-wrapper')) {
-          const text = textWrapper.firstElementChild
-          if (text.firstChild.length > 155) {
-            textWrapper.parentElement.classList.add('benefits__info--more')
+        for (const text of document.querySelectorAll('.benefits__text-inner')) {
+          const textWrapper = text.parentElement
 
-            const height = textWrapper.offsetHeight
-            textWrapper.style.height = `${height}px`
+          const textHeightBefore = text.offsetHeight
+          textWrapper.classList.add('benefits__text--show')
+          const textHeightAfter = text.offsetHeight
+          textWrapper.classList.remove('benefits__text--show')
 
-            let timeoutId
+          text.style.height = `${textHeightBefore}px`
+
+          if (textHeightBefore < textHeightAfter) {
+            textWrapper.classList.add('benefits__text--more')
 
             textWrapper.addEventListener('mouseenter', function () {
-              if (timeoutId) {
-                clearTimeout(timeoutId)
-                textWrapper.classList.remove('benefits__text-wrapper--show')
-              }
-              textWrapper.classList.add('benefits__text-wrapper--show')
-              textWrapper.style.height = `${text.offsetHeight}px`
-              textWrapper.parentElement.classList.remove('benefits__info--more')
+              textWrapper.classList.add('benefits__text--show')
+              textWrapper.classList.remove('benefits__text--more')
+              text.style.height = `${textHeightAfter}px`
             })
 
             textWrapper.addEventListener('mouseleave', function () {
-              textWrapper.style.height = `${height}px`
-              textWrapper.parentElement.classList.add('benefits__info--more')
-              timeoutId = setTimeout(() => {
-                textWrapper.classList.remove('benefits__text-wrapper--show')
-              }, 500)
+              textWrapper.classList.remove('benefits__text--show')
+              textWrapper.classList.add('benefits__text--more')
+              text.style.height = `${textHeightBefore}px`
             })
           }
         }
@@ -137,7 +133,7 @@ function benefits() {
       for (const item of document.querySelectorAll('.benefits__item')) {
         item.querySelector('.benefits__name').addEventListener('click', function () {
           item.classList.toggle('benefits__item--open')
-          $(item.querySelector('.benefits__info')).slideToggle()
+          $(item.querySelector('.benefits__text')).slideToggle()
         })
       }
     }
