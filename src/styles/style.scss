@@ -1,2 +1,8 @@
-@import '../libs/swiper/swiper-bundle.css';
-@import 'main.css';
+@import 'utils/variables';
+@import 'utils/media';
+@import 'utils/fonts';
+@import 'utils/layout';
+@import '../blocks/_ui/**/*';
+@import '../blocks/header/*';
+@import '../blocks/footer/*';
+@import '../blocks/section/section';

@@ -7,7 +7,7 @@ import browsersync from 'browser-sync'
 import gulpif from 'gulp-if'
 
 function isConvertToWebp(file) {
-  return file.extname === '.png' || file.extname === '.jpg'
+  return file.extname === '.jpg'
 }
 
 export default function images() {
