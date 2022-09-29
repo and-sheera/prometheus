@@ -4,8 +4,8 @@
   font-weight: 400;
   font-display: swap;
   src:
-    url('../../fonts/Montserrat-Regular.woff2') format('woff2'),
-    url('../../fonts/Montserrat-Regular.woff') format('woff');
+    url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+    url('../fonts/Montserrat-Regular.woff') format('woff');
 }
 @font-face {
   font-family: 'Montserrat';
@@ -13,8 +13,8 @@
   font-weight: 500;
   font-display: swap;
   src:
-    url('../../fonts/Montserrat-Medium.woff2') format('woff2'),
-    url('../../fonts/Montserrat-Medium.woff') format('woff');
+    url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+    url('../fonts/Montserrat-Medium.woff') format('woff');
 }
 @font-face {
   font-family: 'Montserrat';
@@ -22,8 +22,8 @@
   font-weight: 600;
   font-display: swap;
   src:
-    url('../../fonts/Montserrat-SemiBold.woff2') format('woff2'),
-    url('../../fonts/Montserrat-SemiBold.woff') format('woff');
+    url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+    url('../fonts/Montserrat-SemiBold.woff') format('woff');
 }
 @font-face {
   font-family: 'FoglihtenNo06';
@@ -31,6 +31,6 @@
   font-weight: normal;
   font-display: swap;
   src:
-    url('../../fonts/FoglihtenNo06.woff2') format('woff2'),
-    url('../../fonts/FoglihtenNo06.woff') format('woff');
+    url('../fonts/FoglihtenNo06.woff2') format('woff2'),
+    url('../fonts/FoglihtenNo06.woff') format('woff');
 }
