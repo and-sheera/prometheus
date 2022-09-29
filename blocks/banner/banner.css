@@ -1,0 +1,27 @@
+.banner__ui-h2 {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+.banner__img {
+  margin-top: 40px;
+}
+@media (max-width: 1259px) {
+  .banner__img {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+}
+@media (max-width: 767px) {
+  .banner__img {
+    height: 290px;
+    margin: 30px -16px 0;
+  }
+}
+@media (max-width: 767px) {
+  .banner__img img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}

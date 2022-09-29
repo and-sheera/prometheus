@@ -1,0 +1,198 @@
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto auto auto 1fr;
+  gap: 45px 50px;
+  grid-auto-flow: column;
+}
+@media (max-width: 1259px) {
+  .reasons {
+    gap: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .reasons {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    gap: 15px;
+  }
+}
+.reasons__item {
+  padding: 18px 30px 32px;
+  border: 1px solid #949494;
+}
+@media (max-width: 1259px) {
+  .reasons__item {
+    padding: 15px 10px;
+  }
+}
+.reasons__item--3 {
+  grid-row: 3/5;
+}
+@media (max-width: 767px) {
+  .reasons__item--3 {
+    grid-row: unset;
+  }
+}
+.reasons__item--4 {
+  grid-row: 2/4;
+}
+@media (max-width: 767px) {
+  .reasons__item--4 {
+    grid-row: unset;
+  }
+}
+.reasons__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  margin-bottom: 20px;
+  font: 33px/1.1 "FoglihtenNo06", "Times New Roman", serif;
+  text-transform: uppercase;
+}
+@media (max-width: 1259px) {
+  .reasons__head {
+    font-size: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .reasons__head {
+    font-size: 19px;
+  }
+}
+.reasons__num {
+  font-size: 59px;
+  color: #0c7e7f;
+}
+@media (max-width: 1259px) {
+  .reasons__num {
+    font-size: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .reasons__num {
+    font-size: 42px;
+  }
+}
+.reasons__name-inner {
+  text-indent: 2em;
+}
+@media (max-width: 1259px) {
+  .reasons__name-inner {
+    text-indent: 0.7em;
+  }
+}
+@media (max-width: 767px) {
+  .reasons__name-inner {
+    text-indent: 1.1em;
+  }
+}
+.reasons__ui-ul {
+  max-width: 480px;
+  font-size: 18px;
+}
+@media (max-width: 1259px) {
+  .reasons__ui-ul {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .reasons__ui-ul {
+    max-width: 260px;
+    font-size: 11px;
+  }
+}
+.reasons__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 0 25px 0 30px;
+  text-transform: uppercase;
+}
+@media (max-width: 1259px) {
+  .reasons__title {
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  .reasons__title {
+    min-height: 150px;
+    margin-bottom: 10px;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+}
+.reasons__title-num {
+  margin-right: 40px;
+  padding-top: 0.15em;
+  font: 215px/1 "FoglihtenNo06", "Times New Roman", serif;
+  color: #0c7e7f;
+}
+@media (max-width: 1259px) {
+  .reasons__title-num {
+    font-size: 180px;
+  }
+}
+@media (max-width: 767px) {
+  .reasons__title-num {
+    margin-right: 10px;
+    font-size: 141px;
+  }
+}
+.reasons__title-txt {
+  font: 39px/1.1 "FoglihtenNo06", "Times New Roman", serif;
+}
+@media (max-width: 1259px) {
+  .reasons__title-txt {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .reasons__title-txt {
+    font-size: 24px;
+  }
+}
+.reasons__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px 95px;
+  background: #0c7e7f;
+  color: #fff;
+  font: 33px/1.2 "FoglihtenNo06", "Times New Roman", serif;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+}
+@media (max-width: 1259px) {
+  .reasons__btn {
+    padding: 20px;
+    font-size: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .reasons__btn {
+    min-height: 165px;
+    padding: 25px;
+    font-size: 21px;
+  }
+}

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Main</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="blocks/banner/banner.css">
+    <link rel="stylesheet" href="blocks/about/about.css">
+    <link rel="stylesheet" href="blocks/infrastructure/infrastructure.css">
+    <link rel="stylesheet" href="blocks/reasons/reasons.css">
+    <link rel="stylesheet" href="blocks/gallery/gallery.css">
+    <link rel="stylesheet" href="blocks/benefits/benefits.css">
+    <link rel="stylesheet" href="blocks/form/form.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="inner">
+          <div class="header__burger"><span></span><span></span></div><a class="header__logo" href="/">
+            <svg width="198" height="48" viewbox="0 0 198 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_208_1427)">
+                <path d="M89.1154 0C94.1463 0 96.6617 3.95662 96.6617 7.86117C96.6617 11.8178 94.1463 15.7223 89.1154 15.7223H83.9819V23.5835H80.5938V0H89.1154ZM89.1154 12.3384C91.9388 12.3384 93.3249 10.0998 93.3249 7.91323C93.3249 5.67462 91.9388 3.43601 89.1154 3.43601H83.9819V12.3384H89.1154V12.3384Z" fill="currentColor"></path>
+                <path d="M104.514 11.6095H108.416C111.239 11.6095 112.625 9.57918 112.625 7.49675C112.625 5.46638 111.239 3.43601 108.416 3.43601H103.282V23.5835H99.9453V0H108.416C113.446 0 116.013 3.74837 116.013 7.49675C116.013 10.8286 114.011 14.0043 110.007 14.6811L117.348 23.5315H112.984L104.514 13.1714V11.6095V11.6095Z" fill="currentColor"></path>
+                <path d="M3.38813 38.3691C5.3902 38.3691 6.4169 39.931 6.4169 41.5448C6.4169 43.1067 5.3902 44.6685 3.38813 44.6685H1.33472V47.7921H0V38.3691H3.38813ZM3.38813 43.3149C4.5175 43.3149 5.08219 42.4299 5.08219 41.5448C5.08219 40.6598 4.5175 39.7748 3.38813 39.7748H1.33472V43.367H3.38813V43.3149Z" fill="currentColor"></path>
+                <path d="M22.5389 43.0546H24.1303C25.2597 43.0546 25.8244 42.2216 25.8244 41.3887C25.8244 40.5557 25.2597 39.7748 24.1303 39.7748H22.0769V47.8442H20.7422V38.3691H24.1303C26.1324 38.3691 27.1591 39.8789 27.1591 41.3887C27.1591 42.7422 26.3377 43.9917 24.7463 44.252L27.6724 47.7921H25.927L22.5389 43.6793V43.0546Z" fill="currentColor"></path>
+                <path d="M42.8626 39.6706C43.7353 38.7856 44.916 38.2129 46.2507 38.2129C47.5855 38.2129 48.7662 38.7856 49.6389 39.6706C50.5116 40.5556 51.0249 41.753 51.0249 43.1066C51.0249 44.4602 50.4602 45.6576 49.6389 46.5426C48.7662 47.4276 47.5855 48.0003 46.2507 48.0003C44.916 48.0003 43.7353 47.4797 42.8626 46.5426C41.9899 45.6576 41.4766 44.4602 41.4766 43.1066C41.4766 41.753 41.9899 40.5556 42.8626 39.6706ZM48.6635 40.6077C48.0475 39.983 47.1748 39.5665 46.2507 39.5665C45.3267 39.5665 44.454 39.983 43.838 40.6077C43.222 41.2324 42.8113 42.1174 42.8113 43.0545C42.8113 43.9916 43.222 44.8767 43.838 45.5014C44.454 46.1261 45.3267 46.5426 46.2507 46.5426C47.1748 46.5426 48.0475 46.1261 48.6635 45.5014C49.2795 44.8767 49.6389 44.0437 49.6389 43.0545C49.6389 42.1174 49.2795 41.2324 48.6635 40.6077Z" fill="currentColor"></path>
+                <path d="M66.7332 47.7921H65.3984V38.3691H66.4765L69.5566 42.9505L72.6367 38.3691H73.7147V47.7921H72.38V41.1804L69.9673 44.8247H69.1972L66.7845 41.1804V47.7921H66.7332Z" fill="currentColor"></path>
+                <path d="M89.5267 46.4386H93.8388V47.7921H88.1406V38.3691H93.7875V39.7227H89.4753V42.3778H93.6848V43.7314H89.4753V46.4386H89.5267Z" fill="currentColor"></path>
+                <path d="M110.675 47.7921V39.6707H107.852V38.3691H114.833V39.6707H112.01V47.7921H110.675Z" fill="currentColor"></path>
+                <path d="M130.288 42.3778H134.241V38.4212H135.575V47.8442H134.241V43.7314H130.288V47.8442H128.953V38.3691H130.288V42.3778Z" fill="currentColor"></path>
+                <path d="M151.436 46.4386H155.748V47.7921H150.102V38.3691H155.748V39.7227H151.436V42.3778H155.646V43.7314H151.436V46.4386Z" fill="currentColor"></path>
+                <path d="M170.023 44.9809V38.3691H171.358V44.9809C171.358 46.0221 172.436 46.5427 173.463 46.5427C174.438 46.5427 175.516 46.0221 175.516 44.9809V38.3691H176.851V44.9809C176.851 46.9071 175.003 47.8963 173.412 47.8963C171.82 47.8963 170.023 46.9071 170.023 44.9809Z" fill="currentColor"></path>
+                <path d="M196.411 40.7645C196.206 39.9316 195.333 39.5151 194.512 39.5671C193.896 39.5671 193.177 39.7754 192.818 40.296C192.613 40.5563 192.561 40.8687 192.613 41.181C192.664 42.1702 193.742 42.2743 194.717 42.3784C196.001 42.5346 197.592 42.899 197.951 44.4088C198.003 44.617 198.003 44.8253 198.003 45.0335C198.003 46.8556 196.206 47.9489 194.563 47.9489C193.126 47.9489 191.381 47.0639 191.227 45.3979V45.1376L192.561 45.0856V45.2938V45.2418C192.664 46.1268 193.691 46.5953 194.563 46.5953C195.539 46.5953 196.668 46.0227 196.668 45.0335C196.668 44.9294 196.668 44.8253 196.617 44.7212C196.463 43.9923 195.487 43.8882 194.563 43.7841C193.126 43.6279 191.432 43.3155 191.278 41.3372C191.227 40.7125 191.381 40.0357 191.791 39.5151C192.407 38.6821 193.537 38.2656 194.615 38.2656C196.052 38.2656 197.541 39.0465 197.797 40.7645H196.411Z" fill="currentColor"></path>
+              </g>
+              <defs>
+                <clippath id="clip0_208_1427">
+                  <rect width="198" height="48" fill="white"></rect>
+                </clippath>
+              </defs>
+            </svg></a>
+          <div class="header__content"><a class="header__tel" href="tel:+74735520988"><span>+7(473)552-09-88</span>
+              <svg width="19" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 13.728v2.559a1.704 1.704 0 0 1-1.162 1.623 1.712 1.712 0 0 1-.702.083 16.938 16.938 0 0 1-7.376-2.619 16.652 16.652 0 0 1-5.129-5.118A16.86 16.86 0 0 1 1.007 2.86a1.703 1.703 0 0 1 1.012-1.714C2.236 1.05 2.47 1 2.708 1h2.564a1.712 1.712 0 0 1 1.71 1.467c.108.82.309 1.623.598 2.397a1.703 1.703 0 0 1-.385 1.8L6.11 7.748a13.663 13.663 0 0 0 5.128 5.118l1.086-1.083a1.71 1.71 0 0 1 1.803-.384c.776.289 1.582.489 2.402.597A1.71 1.71 0 0 1 18 13.728Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg></a>
+            <div class="header__container">
+              <ul class="header__menu">
+                <li class="header__item"><a class="header__link" href="#about">О проекте</a></li>
+                <li class="header__item"><a class="header__link" href="#infrastructure">Инфраструктура</a></li>
+                <li class="header__item"><a class="header__link" href="#reasons">Преимущества</a></li>
+              </ul><a class="ui-button header__ui-button" href="#">Заказать звонок</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__shadow"></div>
+      </header>
+      <main>
+        <section class="section section--banner">
+          <div class="inner">
+            <div class="banner">
+              <h2 class="ui-h2 banner__ui-h2">Квартиры <span class="text-nowrap">премиум-класса</span> в&nbsp;центре города
+              </h2>
+              <div class="banner__img"><img src="img/banner.webp" alt=""/></div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--bg">
+          <div class="inner">
+            <div class="about" id="about">
+              <h2 class="ui-h2 about__ui-h2">о проекте
+              </h2>
+              <div class="about__container">
+                <div class="about__img-left"><img src="img/about-1.webp" alt=""/></div>
+                <div class="about__txt"><span class="about__txt-accent">PROMETHEUS</span>&nbsp;&mdash; это идеальное сочетание стиля и&nbsp;премиальности. Жилой комплекс премиум-класса состоит из&nbsp;4&nbsp;секций переменной этажности (5-12 этажей). Его строгий корпус с&nbsp;отделкой кирпичом, керамогранитом и&nbsp;штукатуркой прекрасно вписывается на&nbsp;Средне-Московскую улицу в&nbsp;историческую часть города.</div>
+                <div class="about__txt">Истинным ценителям роскоши придутся по&nbsp;душе квартиры с&nbsp;террасами. Панорамное остекление не&nbsp;только позволит наполнить солнечным светом пространство каждой квартиры, но&nbsp;и&nbsp;подарит прекрасные виды. Городская площадь с&nbsp;ресторанами, супермаркетами, коммерческая инфраструктура на&nbsp;первых этажах привносят созвучную с&nbsp;ритмом города динамику.</div>
+                <div class="about__img-right"><img src="img/about-2.webp" alt=""/></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--bg section--ov-h">
+          <div class="inner">
+            <div class="infrastructure" id="infrastructure">
+              <h2 class="ui-h2">Инфраструктура <span class="ui-h2__attention">жилого&ensp;<span class="ui-h2__attention ui-h2__attention--child">комплекса</span></span>
+                <div class="ui-slider-nav infrastructure__ui-slider-nav">
+                  <div class="ui-slider-nav__btn ui-slider-nav__btn--prev"></div>
+                  <div class="ui-slider-nav__btn ui-slider-nav__btn--next"></div>
+                </div>
+              </h2>
+              <div class="infrastructure__slider">
+                <div class="swiper-wrapper">
+                  <div class="infrastructure__slide swiper-slide infrastructure__slide--kindergarten">
+                    <div class="infrastructure__img"><img src="img/infrastructure-1.webp" alt=""/>
+                      <div class="infrastructure__aside">
+                        <div class="infrastructure__icon"><img src="data:image/png;base64,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" alt=""/></div>
+                        <div class="infrastructure__name">Детский сад</div>
+                      </div>
+                    </div>
+                    <div class="infrastructure__info">
+                      <div class="infrastructure__text"><span class="infrastructure__text-bolder">Детский сад в шаговой доступности</span> - это отличная возможность быстро отвести ребенка в группу и поехать на работу, больше проводить времени с детьми по вечерам, ведь на дорогу вы потратите считанные минуты</div>
+                      <div class="infrastructure__text"><span class="infrastructure__text-bolder">В садике есть все, что нужно для малышей:</span>
+                        <div class="infrastructure__benefits">
+                          <div class="infrastructure__benefit">
+                            <div class="infrastructure__benefit-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOfSURBVHgB7ZhNSFRRFMfvmw+VmdK0GdFIHMNKgpKiyGihCzEpiKBFLYqkiJYZfWAQpiC1CItAoxbSx0ba9LUILMMPBDGihYuEJDVxGr9npKTBj5l+l0Z4jTPvvWkwhOYPZ969555z57xzz7n3nqcIDXg8HldycvLDYDC4g64fejM3N3clOzt7IprO2NhYmdVqvRoIBIroDkDNDoejThiAScsQJn1P04cxpxcWFipolyQlJXXQVyLpTE5OHrFYLC0Y0k33EM9biqKcgd8o4sHU1FQT9E7N83q96+B5p6enz0XR6WGsQc2bmJjYBT84Pj6eJXQQ1TO80SYeHWpeenq69JL0TH64PDwTtAcPPlXznU7nRx5foXKhA0u0AVwslyIglhs5v7i4aI2gYmZMMZvN8xHGgsIALCJGYOQ9Yskbiw4eu45Op55czMbg9jYRI8imJ0bkTGIVIWFMNKwqYzQDmEy9xIZ1VhgAm52IF5rGkJLPIEOZwN5jJn1bRRzQS+0BUrldGABGW+P1TiKAo0EvgK243yYMgBPdKuKEXsxUEwfV4h9Bz5h6bnYNwgA4ra3QZxEH9FLbxxVzSBjAf5VNARHhcqUlj3f8YiVAduTi9rRYdLjn5osEVgAKp3Itm1vf7Ozsy5ycnJ/qQWonJ3XQSVLWiUw31cGr8AlYzmJiZR9k57B8m5mZueyuS7lSwhylVA6PGe+PZowM4N1MdNNms31izTcvDWBkJQWbGyOOcwnfCTXC+yCLOzmOzloMuQO/nfZhqIg/7JB1E3IbpczIyMh62s0mk+k5coXMtUVoeUb+YMQajv8aFC5KD8DKZHIH7aqMjIz7IQ+45Jvxh7Js7YG2IfMdnQpO9o4lGfpt6NnpfmG8APKgcxCvDgkdKGHu3MpEe6XHmOCFLNrEcpcXI5MH/eCNWyPJ4I1yjMiChqgMOpE1tkW43e6CaLWzxODg4LrR0dHtWnMMDw9v8Pl8eVoyMzMz+bLq1JIxpaSk9LHOfuiG+NPIHHhtqampXpawl7cdpH9ZLcOyFMLvstvtboJ3QMpAZWoZjDxK4T/KEvfzPKZljMKf2vjscQBX3g7x7uL+VNb+Au1e2uf9fr+bYD5BX57gLbLeDtXilVATVIcxKciegn+N/iOoCyqFZALUkq0PXC6XR9MY1VvmMmEVzQLx+zNIF4FZH+YJFzI1NHOhaTzWlJaW9lotw/eZ/cSbNNLBHN941oeK/wT+Gr8AAqbyGqq2XVcAAAAASUVORK5CYII=" alt=""/></div>
+                            <div class="infrastructure__benefit-txt">Бассейн</div>
+                          </div>
+                          <div class="infrastructure__benefit">
+                            <div class="infrastructure__benefit-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAQAAAAn3TzeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAALNSURBVDjLfZTfi01RFMe/RISmS7z5caQUT36UB4WhyI8XJZHSHI2QGVHU+JW5MdEIM0lRfpyJKA/M+AfcBz9zMYmkJnfL4M6cvb5rTyg/ouPhnnPvnXtnnKe19+mz9nd/11obqPhMShoYaE6+s1d+ard2iq/T8b+P03iO/TwtHTRuPgD0jedKXtIcg7w3DKQNamyzGQsAzqNxzaV/bi+zzh8CklPsdmUZWcNbPFEGenxQnqiw2UwndeGSCtFXmS6tPk9mpC3lkM8n4vOYZGik6duUZL9nDLPcmKxsrXQxqzvjZd7jm0Se86RF3g2sKJOWc6lCHG6Si86jidcMeGCQYI+G+4t33sNrceTbNBAekdbCWabK0+nawx1F8IVdUMKi0fziUhDfXan21XnyOhEudXoxGpn3pFVvcoP4mrG7oJ26ZsjSr9IMp9otPCP3GUkPH/ExjVyQE2xnAL5iTSUSjbC1bGOk76Wd9Z9mSwe3A87TNwDgUpqD/qmQl3JpfpCM7Jb1mkms1y4AoC24KN/BfAn54el1fpaDieX8WIiiCZoDAF4J1wIAe6G/ip1/njnZGo0oa7j2/q1x9EjmALZWMgCgP1Eon13HnDRF4wYLDutsW5Ig3AQAfOiW9o1nN6QjXOva+LBvZrWb+blyN5ZbL4cBwC7j23CjdEEa5Ye0l0sb1C9PY1M2M4jPPcpIfLiUhGZs3pNFQ2LZOFqWYAD73QwAPMtj/bNoque3b6bEJRhYyNsxtI+Xk6fA5D3WS1clZmuLd1vMO/G0ZIvDrA36Evg6uWriG206ScAAyIzSB+IPehL0JgDoPddcajYGXFkcmlZAbth0paA0n+S9gYn2OLu1KVZhkkrKST0kz6VlqJ7fxtfcD/ROCucBQOgn7kVj5Bmd3TXMk+c8CWgYcDVrABrnmZRbztMS2rakT4dHfenkK/5lxN80EkhjNfIPuPvXAJ6vQdwAAAAASUVORK5CYII=" alt=""/></div>
+                            <div class="infrastructure__benefit-txt">Игровые комнаты</div>
+                          </div>
+                          <div class="infrastructure__benefit">
+                            <div class="infrastructure__benefit-icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASDSURBVHgBtZdZaFRnFMe/ezNJk2omJpO0mSTSTvVBSoktUuhDC5YuaWko3WxpH7QilRKwbeqDiktU1IgKils04kZUBEEFBRXRiajg8uKGKEES1JBkMkkmMzHJZBt/J86Vy3Dn3jHEA4dvO+f8z/Kdb+5o6jVQe3t7eVpa2u+xWMwDH41EIkd9Pl+/WUazM9Da2vpeRkbGGpRveDyeLSoF6ujo2MMggNsZI7qu/8z8t/T09I/dbnfQ0UBnZ2cpRm7j/ffMt8PrnXSCweCf6Oy3cOZf+BFc29LS8m5SAxKpgHZ1dU03Kdc6gQN8HkdnWJ21tbVN4XwOdu4zn54M9KqANjc3T2Z+F4UFcfDdomzjbCN67ygb4vxDAvAnBWUsgW8BtBTBBubzRYZ6aYFA4FuzHpfnLWSuEO3nKgXCZkA3g3IB6rgMFSMjIx1snQZkT35+/lpGMVgh4JqmxbixPwG0ztDt7+9/H51gQUGB3wkU57zYeKYngvb29naaQHfIOTf6KUO5Ac76L84LAK+Wcww1wNPC4bDHDrSxsXESGNXwPi0RNDMz8xRGDufl5W0MhUI+IpkPP8SJA5J+zvzw1tzc3G2kbCd6YWQXE8n/7M9jHUiC64JLsFWDrQ0ayg2k7hcDlMNDRLSJOk7EiIDsIrrvGC+zv9kCfB86fozVIfcGgXiTRVxYWPgYvZFRL5i4hoeHfYAeRLEWAzvjclOlCoDt7e7uvotMpZF2wKXmflKdhY5wWjzlUYYmlQLphP4N4z8o15tAVTQafUjEU+RBGBoa2o3cOeNMwOXCwUuMMqixEGmdR42WJ+5T41xS+QPgn1jpSd+qMZJud0g/x4g66nK5YmqcyZXsgPr9QSqr4TODg4M+opNWKONChdQ4kGXE8pBTu9VMP6Wef1PDMubnqPV/apzIEpi+/ojhGKBPjD1ep61EPCtBNIc7MJvslPPwl6pXoGSpziHFUfNGUVFRN+lOT5DTkJtKq73JWzCDc31gYGCO1+ttUqkC04MTenp63pY5j8lEDL1cCxFVBhFr5j1aLpSVlbWDPo8UFxf30h2/8uFwglL96AQ++gUi7QTQStO+vM0lprn8KpXi3J24kx+wvsdU2uwaXAjX81ZXZmdnz2S+gHvxhXIio49J1Qp4ruyxXgkvNEX8smeN/jX3scgjUyNz6n4WtgV22R2S2q8xmB1fuu1k+UkUYD/yM8nGejJYxfaFpLaVPYVIa5OwSoG4ZKtwdjFO1MsaRz5TYwGml2/IOxx/i8PKgQSQaIt58SahexxHvhwTMN4vkzrGaznZwrG5FmpH5KEh1XVkarY4YWlb2RCG1/CI+IRZPrEQmZa4AWANDo9+EAIs39ZVVradLtdXXJYJ8aXb4nwRwy7znrzl6BzkrBKHq8jWMfgAQTQZMnJnbIGhMDV7ql6RuBMbuVg3adPrgM8CuAwwrwl4s0t+EHibc/Ao50UQelj2GGX9gAtyUYT5aQyb/wUYc6t/Bnz+iHwFaT8B6Els7QfsUl9f3+jPK69bSL65HD9Jx5twou058VzsD+sRhykAAAAASUVORK5CYII=" alt=""/></div>
+                            <div class="infrastructure__benefit-txt">Разнообразные детские площадки</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="infrastructure__text"><span class="infrastructure__text-bolder">Количество мест:</span>  400</div>
+                    </div>
+                  </div>
+                  <div class="infrastructure__slide swiper-slide infrastructure__slide--education">
+                    <div class="infrastructure__img"><img src="img/infrastructure-2.webp" alt=""/>
+                      <div class="infrastructure__aside">
+                        <div class="infrastructure__icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAYAAABznEEcAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUzSURBVHgBzZpriFRlGMefscJKpdVSW1l1NKILfbCoEJTaJHFrs40uUBhmH6ykG4GkIDVLFz+0VF8qqzW2GxWVWgYFRa0VbhejdsPKzXR1C6lWdy0UqS0f/w/v/zBnjzPOucyZmT/8eM858z7veZ73nPd6RqSMUtUTwU1gPdgJ/gH/gm7wNrhWallw8AbwmzoNgU3gGbAGfMprpj5whdSa4NRDdHAHuMWeSIE8J4NbGYQpJ7UiONNKp94EY0LknwA6afMymCHVFBy4mM58GNFuNHiV7eWgtSOplnDzHrAHTJUYgl0W9IK/wTSptHxPYaUkEOwvYDmrJaZGSXw1M90oCZTJZL5F0gtmSUwlCeJ88Duc+LFYBtTubWC8lNYQqJOYShKE3bS/2I/sQp8D7+P4JElRSYI4AWjwIhweB9pw2Ap2gtnAutSspKTjJaGs30cyGcwEF4JlPH8N3AHuExfQ98i7DukGsAccYBF7pVqCQ1+AL8GjOlI9wX7fBjQOhof1aD3Msrqk0uKN/bJGfFYJmylgHqcm9/tsh6sdxE9MsxHtZ9DuB6axg0jSsE3bwbOSTM+DbVKgkwirJEHsAhPBBEmm6SznV6m08PjnBxpqpNko8p8ZaFNzpBrCja8G2+nE/Ii287y2AK6RagoO1NGZJyPavUC7SVILgiOfqFt+hnII+aaDvzTiOiRVwZlLWKvvgEyJvDYt+Yj5Y89cUxEcytGxz4uNGRwbvAAekFoUHFtJBw+BDnAPuB7cBV7iK2SruFVSi1K3m2GrtBcZyLAWlgV3KRgtZVJGYsocQTIXnAOsj68Hfsf+AEvBIDgFtIMpvt//E7eiM7rBB1hgfSOVEJxvYG/kaR/bwdPsoWy3714eD4LHeGzYvtMW0A/a1W3dDPrK2mg9l6QhFHwdWAIma37zy5zL+nsjdTt+pjr+tpfnFsBMUM/ztYHyz9b8Blwf77MYNEu5hMJW8AbeNKO1SL7L+LtNy3M87mdq50t53FjEvk1HaoWkEMRnvhts5usx3pfPNsUGNL/v2sXa38Bze3X6AmXbuHGn5ncFTV+lGYQ5ZK/Jas2/Vv+r282bzbyP87pdG8VrY9VtKps6eM0GSNvGPMTrf6rbEp2m+dcunSAC1xeAdb4atAXSG3wC4wJ5x/KJvKduCWuybvhdcLmObFvlDUJdg/ZWcecVyXO6ugHtZ19Ar4AWdd8srK2s9/22jRVTV6S8c5nPer0lkkTqeiCvxkz2vi8sYTNX3eh8MGC7H6xVN74cy96eylDAdrkkCGKrusZ8nD0F1vRAsRoM2NoW/iN0oi2kzVSwS117u4jXvtNAZxA1CCus03d+JZ26MaR9E/M3hczfwvxX+a51lgoi6hrbWwefJumogWlvFKOoQbQw3SrpqJvpIomgUtuYA2AWHudicbvgd4MuTNQ2SQpCuTaAbsZhDumpSLeALNgncYWC5oDdmpf16RMj2EdqE7SZBN7y3XPIa+SxpW49vIYF1ke0jRwE7bzBrj1Mr1ayTeAR7xa3UVYN/YL77y+VKWrDfh01swgk/iRQSCh3DLhZ3GeBshee5aP1/jFgk7UOLbFbEfZ1UvcR8ynNj9SWPqFpfFFFoRl1u34f+xqejag2JW+QCEGoWzgtB1/7yrIVY7MW+EdCKsKNzgCrND/pO8Cn01QsCFZCo7q5lVfr9keWBzWtZWlYwYGF7BaHfY4tA7fz3NpRTt1czGRrCJvCL5Bak7q1sa3Sdmhh9bDWY3/urajU7UF1qPvbgzXaRklJRwBdkZT0fMgWfAAAAABJRU5ErkJggg==" alt=""/></div>
+                        <div class="infrastructure__name">Общеобразовательные школы и досуг</div>
+                      </div>
+                    </div>
+                    <div class="infrastructure__info">
+                      <div class="infrastructure__text">Расположение <span class="infrastructure__text-bolder">PROMETHEUS</span> позволяет юным жителям проводить время с пользой — в максимальной близости расположены три средние общеобразовательные школы ,а также дворец спорта «Юбилейный»и спортивный комплекс «Спартак».</div>
+                      <div class="infrastructure__text">Занятия ведутся по таким видам спорта, как хоккей, ушу, плавание и фигурное катание.</div>
+                    </div>
+                  </div>
+                  <div class="infrastructure__slide swiper-slide infrastructure__slide--location">
+                    <div class="infrastructure__img"><img src="img/infrastructure-3.webp" alt=""/>
+                      <div class="infrastructure__aside">
+                        <div class="infrastructure__icon"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewBox='0 0 40 48' fill='none'%3E%3Cpath d='M39 19.8182C39 34.4545 20 47 20 47C20 47 1 34.4545 1 19.8182C1 14.8273 3.00178 10.0408 6.56497 6.51172C10.1282 2.98262 14.9609 1 20 1C25.0391 1 29.8718 2.98262 33.435 6.51172C36.9982 10.0408 39 14.8273 39 19.8182Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20 26.0909C23.4978 26.0909 26.3333 23.2825 26.3333 19.8182C26.3333 16.3538 23.4978 13.5455 20 13.5455C16.5022 13.5455 13.6667 16.3538 13.6667 19.8182C13.6667 23.2825 16.5022 26.0909 20 26.0909Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt=""/></div>
+                        <div class="infrastructure__name">Локация</div>
+                      </div>
+                    </div>
+                    <div class="infrastructure__info">
+                      <div class="infrastructure__text">Жилой комплекс возводится на пересечении самых тихих улиц оживленного центра - Средне-Московской и Революции 1905 года. Такое нахождение обеспечивает рядом большой выбор торговых центров и гипермаркетов с полным ассортиментом всего необходимого — «Галерея Чижова», «Поиск», «Старик Хоттабыч». В 5 минутах ходьбы на главной магистрали правого берега — остановка общественного транспорта «Кольцовская», откуда можно с легкость добраться в любую точку города. </div>
+                    </div>
+                  </div>
+                  <div class="infrastructure__slide swiper-slide infrastructure__slide--entertainment">
+                    <div class="infrastructure__img"><img src="img/infrastructure-4.webp" alt=""/>
+                      <div class="infrastructure__aside">
+                        <div class="infrastructure__icon"><img src="data:image/png;base64,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" alt=""/></div>
+                        <div class="infrastructure__name">Развлечения </div>
+                      </div>
+                    </div>
+                    <div class="infrastructure__info">
+                      <div class="infrastructure__text">Жить в самом центре города — это значит двигаться в динамичном ритме. В окружении возводимого комплекса расположена самая большая концентрация в Воронеже кафе и ресторанов всевозможной кухни, арт-галерей и выставочных пространств.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ui-slider-pagination infrastructure__ui-slider-pagination">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--bg">
+          <div class="inner">
+            <div class="reasons" id="reasons">
+              <div class="reasons__item">
+                <div class="reasons__head">
+                  <div class="reasons__name">Архитектура
+                    <div class="reasons__name-inner">и ландшафт</div>
+                  </div>
+                  <div class="reasons__num">01</div>
+                </div>
+                <ul class="ui-ul reasons__ui-ul">
+                  <li>Цельный архитектурный ансамбль</li>
+                  <li>Создание комфортной среды для времяпрепровождения людей</li>
+                  <li>Соразмерный человеку облик здания, который&nbsp;не угнетает однообразием</li>
+                </ul>
+              </div>
+              <div class="reasons__item">
+                <div class="reasons__head">
+                  <div class="reasons__name">Безопасность
+                    <div class="reasons__name-inner">и комфорт</div>
+                  </div>
+                  <div class="reasons__num">02</div>
+                </div>
+                <ul class="ui-ul reasons__ui-ul">
+                  <li>Автоматическая система пожаротушения внутреннего паркинга</li>
+                  <li>Виденаблюдение на территории</li>
+                  <li>Выход из подъезда в закрытый двор</li>
+                  <li>Система СКУД для жильцов дома по территории двора</li>
+                </ul>
+              </div>
+              <div class="reasons__item reasons__item--3">
+                <div class="reasons__head">
+                  <div class="reasons__name">Современные
+                    <div class="reasons__name-inner">Технологии</div>
+                  </div>
+                  <div class="reasons__num">03</div>
+                </div>
+                <ul class="ui-ul reasons__ui-ul">
+                  <li>Современные установки приточно-вытяжной и противодымной вентиляции</li>
+                  <li>Наличие индивидуального теплового пункта для подогрева систем горячего водоснабжения и отопления</li>
+                  <li>Регулирование расхода теплоносителя по магистралям осуществляется автоматическими балансировочными клапанами.</li>
+                </ul>
+              </div>
+              <div class="reasons__title">
+                <div class="reasons__title-num">4</div>
+                <div class="reasons__title-txt">Причины выбрать именно <br> PROMETHEUS</div>
+              </div>
+              <div class="reasons__item reasons__item--4">
+                <div class="reasons__head">
+                  <div class="reasons__name">продуманное
+                    <div class="reasons__name-inner">благоустройство</div>
+                  </div>
+                  <div class="reasons__num">04</div>
+                </div>
+                <ul class="ui-ul reasons__ui-ul">
+                  <li>Покрытие тротуара, как  площадки для подъезда автомобилей к проектируемому зданию выполнено из вибропрессованной плитки</li>
+                  <li>Детские и спортивные площадки выполнено с резиновым покрытием;</li>
+                  <li>Озеленение территории предусматривает устройство газонов</li>
+                  <li>Установка малых архитектурных форм и переносных изделий дополняет архитектурную выразительность проектируемого здания и обеспечивает необходимый комфорт для жильцов</li>
+                </ul>
+              </div><a class="reasons__btn" href="#">Перейти в планировки жилого комплекса</a>
+            </div>
+          </div>
+        </section>
+        <section class="section section--bg section--ov-h">
+          <div class="inner">
+            <div class="gallery">
+              <h2 class="ui-h2 gallery__ui-h2">Фотогалерея
+              </h2>
+              <div class="gallery__slider">
+                <div class="ui-slider-nav gallery__ui-slider-nav">
+                  <div class="ui-slider-nav__btn ui-slider-nav__btn--prev"></div>
+                  <div class="ui-slider-nav__btn ui-slider-nav__btn--next"></div>
+                </div>
+                <div class="swiper-wrapper">
+                  <div class="gallery__slide swiper-slide">
+                    <div class="gallery__img gallery__img--top"><img src="img/gallery-1.webp" alt=""/></div>
+                    <div class="gallery__img gallery__img--bot"><img src="img/gallery-2.webp" alt=""/></div>
+                    <div class="gallery__img gallery__img--right"><img src="img/gallery-3.webp" alt=""/></div>
+                  </div>
+                  <div class="gallery__slide swiper-slide">
+                    <div class="gallery__img gallery__img--top"><img src="img/gallery-1.webp" alt=""/></div>
+                    <div class="gallery__img gallery__img--bot"><img src="img/gallery-2.webp" alt=""/></div>
+                    <div class="gallery__img gallery__img--right"><img src="img/gallery-3.webp" alt=""/></div>
+                  </div>
+                  <div class="gallery__slide swiper-slide">
+                    <div class="gallery__img gallery__img--top"><img src="img/gallery-1.webp" alt=""/></div>
+                    <div class="gallery__img gallery__img--bot"><img src="img/gallery-2.webp" alt=""/></div>
+                    <div class="gallery__img gallery__img--right"><img src="img/gallery-3.webp" alt=""/></div>
+                  </div>
+                  <div class="gallery__slide swiper-slide">
+                    <div class="gallery__img gallery__img--top"><img src="img/gallery-1.webp" alt=""/></div>
+                    <div class="gallery__img gallery__img--bot"><img src="img/gallery-2.webp" alt=""/></div>
+                    <div class="gallery__img gallery__img--right"><img src="img/gallery-3.webp" alt=""/></div>
+                  </div>
+                  <div class="gallery__slide swiper-slide">
+                    <div class="gallery__img gallery__img--top"><img src="img/gallery-1.webp" alt=""/></div>
+                    <div class="gallery__img gallery__img--bot"><img src="img/gallery-2.webp" alt=""/></div>
+                    <div class="gallery__img gallery__img--right"><img src="img/gallery-3.webp" alt=""/></div>
+                  </div>
+                </div>
+                <div class="gallery__pagination"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--bg">
+          <div class="inner">
+            <div class="benefits">
+              <h2 class="ui-h2 benefits__ui-h2">Комфорт <span class="ui-h2__attention">и безопасность</span>
+              </h2>
+              <div class="benefits__container">
+                <div class="benefits__item">
+                  <div class="benefits__name">Паркинг</div>
+                  <div class="benefits__text">
+                    <div class="benefits__text-inner">В жилом комплексе предусмотрено 63 машино-места в подземном паркинге с устройством современных противопожарных систем.</div>
+                  </div>
+                </div>
+                <div class="benefits__item">
+                  <div class="benefits__name">Система безопасности</div>
+                  <div class="benefits__text">
+                    <div class="benefits__text-inner">За порядком на территории жилого комплекса установлены видеокамеры, а контроль въезда на территорию паркинга осуществляется через КПП.</div>
+                  </div>
+                </div>
+                <div class="benefits__item">
+                  <div class="benefits__name">Территория</div>
+                  <div class="benefits__text">
+                    <div class="benefits__text-inner">Проектируемый объект представляет собой цельный архитектурный ансамбль, в который включены: здания, элементы благоустройства, озеленения, малые архитектурные формы.</div>
+                  </div>
+                </div>
+                <div class="benefits__item">
+                  <div class="benefits__name">Благоустройство</div>
+                  <div class="benefits__text">
+                    <div class="benefits__text-inner">На территории предполагаются современные деревянные детские площадки с резиновым покрытием. Озеленение предусматривает устройство газонов. Установка малых архитектурных форм и переносных изделий дополняет архитектурную выразительность проектируемого здания и обеспечивает необходимый комфорт для жильцов.</div>
+                  </div>
+                </div>
+                <div class="benefits__item">
+                  <div class="benefits__name">Пожарная сигнализация</div>
+                  <div class="benefits__text">
+                    <div class="benefits__text-inner">Пожарную безопасность контролируют датчики задымления и сигнализация, а, так же системы оповещения и управления эвакуацией.</div>
+                  </div>
+                </div>
+                <div class="benefits__item">
+                  <div class="benefits__name">Закрытые дворы</div>
+                  <div class="benefits__text">
+                    <div class="benefits__text-inner">Обеспечат приватность и безопасное место прогулок для детей возможностью доступа только по магнитным ключам.</div>
+                  </div>
+                </div>
+                <div class="benefits__item">
+                  <div class="benefits__name">Фасады</div>
+                  <div class="benefits__text">
+                    <div class="benefits__text-inner">В оформлении фасадов зданий используются различные композиционные приемы. Сопоставление цветовых элементов, деталей, фактуры и цвета. В оформлении фасадов зданий используются различные композиционные приемы. Сопоставление цветовых элементов, деталей, фактуры и цвета.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--bg section--pb">
+          <div class="inner">
+            <form class="form">
+              <div class="form__container">
+                <div class="form__title">Оставьте заявку, мы проведем подробную презентацию проекта</div>
+                <div class="form__inner">
+                  <div class="ui-input form__ui-input">
+                    <input id="name" type="text" name="name"/>
+                    <label for="name">Имя</label>
+                  </div>
+                  <div class="ui-input form__ui-input">
+                    <input id="tel" type="text" name="tel"/>
+                    <label for="tel">Телефон</label>
+                  </div>
+                  <div class="ui-checkbox form__ui-checkbox">
+                    <input id="agreement" name="agreement" type="checkbox"/>
+                    <label for="agreement">Соглашаюсь на обработку персональных данных</label>
+                  </div>
+                  <div class="form__button">
+                    <button class="ui-button form__ui-button ui-button--filled">Оставить заявку
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="form__img"><img src="img/form.webp" alt=""/></div>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="inner">
+          <ul class="footer__menu">
+            <li class="footer__item"><a class="footer__link" href="#about">О проекте</a></li>
+            <li class="footer__item"><a class="footer__link" href="#infrastructure">Инфраструктура</a></li>
+            <li class="footer__item"><a class="footer__link" href="#reasons">Преимущества</a></li>
+          </ul><a class="footer__logo" href="/">
+            <svg width="198" height="48" viewbox="0 0 198 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_208_1427)">
+                <path d="M89.1154 0C94.1463 0 96.6617 3.95662 96.6617 7.86117C96.6617 11.8178 94.1463 15.7223 89.1154 15.7223H83.9819V23.5835H80.5938V0H89.1154ZM89.1154 12.3384C91.9388 12.3384 93.3249 10.0998 93.3249 7.91323C93.3249 5.67462 91.9388 3.43601 89.1154 3.43601H83.9819V12.3384H89.1154V12.3384Z" fill="currentColor"></path>
+                <path d="M104.514 11.6095H108.416C111.239 11.6095 112.625 9.57918 112.625 7.49675C112.625 5.46638 111.239 3.43601 108.416 3.43601H103.282V23.5835H99.9453V0H108.416C113.446 0 116.013 3.74837 116.013 7.49675C116.013 10.8286 114.011 14.0043 110.007 14.6811L117.348 23.5315H112.984L104.514 13.1714V11.6095V11.6095Z" fill="currentColor"></path>
+                <path d="M3.38813 38.3691C5.3902 38.3691 6.4169 39.931 6.4169 41.5448C6.4169 43.1067 5.3902 44.6685 3.38813 44.6685H1.33472V47.7921H0V38.3691H3.38813ZM3.38813 43.3149C4.5175 43.3149 5.08219 42.4299 5.08219 41.5448C5.08219 40.6598 4.5175 39.7748 3.38813 39.7748H1.33472V43.367H3.38813V43.3149Z" fill="currentColor"></path>
+                <path d="M22.5389 43.0546H24.1303C25.2597 43.0546 25.8244 42.2216 25.8244 41.3887C25.8244 40.5557 25.2597 39.7748 24.1303 39.7748H22.0769V47.8442H20.7422V38.3691H24.1303C26.1324 38.3691 27.1591 39.8789 27.1591 41.3887C27.1591 42.7422 26.3377 43.9917 24.7463 44.252L27.6724 47.7921H25.927L22.5389 43.6793V43.0546Z" fill="currentColor"></path>
+                <path d="M42.8626 39.6706C43.7353 38.7856 44.916 38.2129 46.2507 38.2129C47.5855 38.2129 48.7662 38.7856 49.6389 39.6706C50.5116 40.5556 51.0249 41.753 51.0249 43.1066C51.0249 44.4602 50.4602 45.6576 49.6389 46.5426C48.7662 47.4276 47.5855 48.0003 46.2507 48.0003C44.916 48.0003 43.7353 47.4797 42.8626 46.5426C41.9899 45.6576 41.4766 44.4602 41.4766 43.1066C41.4766 41.753 41.9899 40.5556 42.8626 39.6706ZM48.6635 40.6077C48.0475 39.983 47.1748 39.5665 46.2507 39.5665C45.3267 39.5665 44.454 39.983 43.838 40.6077C43.222 41.2324 42.8113 42.1174 42.8113 43.0545C42.8113 43.9916 43.222 44.8767 43.838 45.5014C44.454 46.1261 45.3267 46.5426 46.2507 46.5426C47.1748 46.5426 48.0475 46.1261 48.6635 45.5014C49.2795 44.8767 49.6389 44.0437 49.6389 43.0545C49.6389 42.1174 49.2795 41.2324 48.6635 40.6077Z" fill="currentColor"></path>
+                <path d="M66.7332 47.7921H65.3984V38.3691H66.4765L69.5566 42.9505L72.6367 38.3691H73.7147V47.7921H72.38V41.1804L69.9673 44.8247H69.1972L66.7845 41.1804V47.7921H66.7332Z" fill="currentColor"></path>
+                <path d="M89.5267 46.4386H93.8388V47.7921H88.1406V38.3691H93.7875V39.7227H89.4753V42.3778H93.6848V43.7314H89.4753V46.4386H89.5267Z" fill="currentColor"></path>
+                <path d="M110.675 47.7921V39.6707H107.852V38.3691H114.833V39.6707H112.01V47.7921H110.675Z" fill="currentColor"></path>
+                <path d="M130.288 42.3778H134.241V38.4212H135.575V47.8442H134.241V43.7314H130.288V47.8442H128.953V38.3691H130.288V42.3778Z" fill="currentColor"></path>
+                <path d="M151.436 46.4386H155.748V47.7921H150.102V38.3691H155.748V39.7227H151.436V42.3778H155.646V43.7314H151.436V46.4386Z" fill="currentColor"></path>
+                <path d="M170.023 44.9809V38.3691H171.358V44.9809C171.358 46.0221 172.436 46.5427 173.463 46.5427C174.438 46.5427 175.516 46.0221 175.516 44.9809V38.3691H176.851V44.9809C176.851 46.9071 175.003 47.8963 173.412 47.8963C171.82 47.8963 170.023 46.9071 170.023 44.9809Z" fill="currentColor"></path>
+                <path d="M196.411 40.7645C196.206 39.9316 195.333 39.5151 194.512 39.5671C193.896 39.5671 193.177 39.7754 192.818 40.296C192.613 40.5563 192.561 40.8687 192.613 41.181C192.664 42.1702 193.742 42.2743 194.717 42.3784C196.001 42.5346 197.592 42.899 197.951 44.4088C198.003 44.617 198.003 44.8253 198.003 45.0335C198.003 46.8556 196.206 47.9489 194.563 47.9489C193.126 47.9489 191.381 47.0639 191.227 45.3979V45.1376L192.561 45.0856V45.2938V45.2418C192.664 46.1268 193.691 46.5953 194.563 46.5953C195.539 46.5953 196.668 46.0227 196.668 45.0335C196.668 44.9294 196.668 44.8253 196.617 44.7212C196.463 43.9923 195.487 43.8882 194.563 43.7841C193.126 43.6279 191.432 43.3155 191.278 41.3372C191.227 40.7125 191.381 40.0357 191.791 39.5151C192.407 38.6821 193.537 38.2656 194.615 38.2656C196.052 38.2656 197.541 39.0465 197.797 40.7645H196.411Z" fill="currentColor"></path>
+              </g>
+              <defs>
+                <clippath id="clip0_208_1427">
+                  <rect width="198" height="48" fill="white"></rect>
+                </clippath>
+              </defs>
+            </svg></a>
+          <button class="ui-button footer__ui-button ui-button--white">Заказать звонок
+          </button>
+          <div class="footer__by"><a class="footer__by-logo" href="#" target="_blank"><img src="img/footer_made_by.svg" alt=""></a><span>Разработка сайтов</span></div>
+          <div class="footer__year">2022</div>
+          <div class="footer__copyright">
+            <div class="footer__copyright-item"><a href="#"> Политика конфиденциальности.</a></div>
+            <div class="footer__copyright-item"><a href="#"> Все права защищены.</a></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="libs/swiper/swiper-bundle.js"></script>
+    <script src="libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

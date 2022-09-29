@@ -1,0 +1,82 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 51%;
+  color: #1c1c1c;
+  background: #fff;
+}
+@media (max-width: 1259px) {
+  .form {
+    grid-template-columns: 1fr 40%;
+  }
+}
+@media (max-width: 767px) {
+  .form {
+    grid-template-columns: 1fr;
+    margin: 0 -16px;
+  }
+}
+.form__container {
+  padding: 50px 45px;
+}
+@media (max-width: 767px) {
+  .form__container {
+    padding: 30px 20px;
+  }
+}
+.form__inner {
+  max-width: 510px;
+}
+.form__title {
+  margin-bottom: 20px;
+  font: 33px/1.1 "FoglihtenNo06", "Times New Roman", serif;
+}
+@media (max-width: 1259px) {
+  .form__title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .form__title {
+    margin-bottom: 10px;
+    font-size: 21px;
+  }
+}
+.form__ui-input:not(:first-child) {
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  .form__ui-input:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+.form__ui-checkbox {
+  margin-top: 30px;
+}
+@media (max-width: 767px) {
+  .form__ui-checkbox {
+    margin-top: 20px;
+  }
+}
+.form__button {
+  margin-top: 30px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .form__button {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .form__img {
+    height: 255px;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+}
+.form__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
